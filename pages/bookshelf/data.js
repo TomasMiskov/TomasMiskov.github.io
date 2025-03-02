@@ -406,6 +406,22 @@ let data = [
         "date": "22/01/25",
         "rating": "8",
         "review": "https://tomasmiskov.com/love-triangle.html",
+    },
+    {
+        "name" : "The Man Who Mistook His Wife for a Hat",
+        "author": "Oliver Sacks",
+        "url":  "./images/The Man Who Mistook His Wife for a Hat.png",  
+        "date": "05/02/25",
+        "rating": "5",
+        "review": "https://tomasmiskov.com/man-who-mistook-his-wife-for-hat.html",
+    },
+    {
+        "name" : "A Buzz in the Meadow",
+        "author": "Dave Goulson",
+        "url":  "./images/A Buzz in the Meadow.png", 
+        "date": "28/02/25",
+        "rating": "9",
+        "review": "https://tomasmiskov.com/buzz-in-the-meadow.html",
     }
 ]
 
