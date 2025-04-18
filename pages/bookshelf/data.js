@@ -429,7 +429,7 @@ let data = [
         "url":  "./images/Where Crawdads Sing.png", 
         "date": "11/04/25",
         "rating": "9",
-        "review": "https://tomasmiskov.com/buzz-in-the-meadow.html",
+        "review": "https://tomasmiskov.com/where-crawdads-sing.html",
     }
 ]
 
