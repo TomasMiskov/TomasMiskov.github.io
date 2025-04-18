@@ -422,6 +422,14 @@ let data = [
         "date": "28/02/25",
         "rating": "9",
         "review": "https://tomasmiskov.com/buzz-in-the-meadow.html",
+    },
+    {
+        "name" : "Where Crawdads Sing",
+        "author": "Delia Owens",
+        "url":  "./images/Where Crawdads Sing.png", 
+        "date": "11/04/25",
+        "rating": "9",
+        "review": "https://tomasmiskov.com/buzz-in-the-meadow.html",
     }
 ]
 
