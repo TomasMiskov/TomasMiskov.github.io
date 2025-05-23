@@ -1,0 +1,21 @@
+---
+layout: post
+title: Midnight in Peking
+category: book-reflection
+---
+
+### Rating
+**10/10** I picked up this book because I am learning Chinese and I was traveling to visit my girlfriend in Beijing soon. It seemed like a fun thing to read a story set in historical Beijing, so I just searched for a book that included *Beijing* in the title. Found this one, bought it and got to reading with little to no expectations. 
+
+But this book turned out to be a banger! It's a true crime story that seamlessly blends the murder reconstruction of Pamela Werner and the historical developments of pre-war and WWII Beijing. At one moment you are engrossed in the murder case and at another you are getting the broader context of the times that these people lived in, and how, not just China, but the whole world was slowly but surely falling into a war torn reality.
+
+I'm giving it full marks precisely because of this unique blend of a true crime reconstruction and historical narrative. At times there were passages providing a little too much, seemingly unnecessary detail about the involved people, but in retrospect it made a lot of sense to get these backstories. They made the characters that much more real. Plus the author is clearly a history buff so I am sure he got a great kick from researching and understanding all these life stories and their combined involvement as a whole.
+
+The end of the book also explains that the book is mostly based on a pile of documents that the author found in some long-forgotten box in an old British library. I found this very cool because it's makes it such a serendipitous discovery that lead to a re-telling of a story that would have otherwise be forever forgotten. 
+
+### Synopsis
+It's 1937 and China is about to fall into a full scale war with Japan under the Japanese occupation. Beijing is swelling in immigrants from the countryside who are trying to escape Japanese and famine. Meanwhile, the few foreigners living in Beijing are divided into the rich inhabitants of the Legation quarter and poor outcasts of the "Badlands". Pamela Werner is an adoptive daughter of a former British diplomat who's part of the foreign elite. During her Christmas break of 1937 she doesn't return home one day. The next morning, her body is found under a nearby city gate but if she didn't wear her expensive watch, you wouldn't be able to tell it's her. She has been murder and savagely mutilated. The whole of Beijing is shocked and an inquiry into the matter is immediately taken up by the police. The Chinese and British foreign police join forces but ultimately find no suspect and the case falls into the background. However, Pamela's father doesn't give up and funds a private investigation of his own. He produces several lengthy reports of his findings and demands the British foreign police to reopen the matter. But they never do so - the are covering someone's back and their own face...
+
+### Notes
+- After thinking about what rating I would give this book, I came to the conclusion that my rating of 10/10 is probably heavily distorted by the [peak-end bias](https://tomasmiskov.com/thinking-fast-and-slow.html#:~:text=our%20memories%20are,end%20of%20it). Especially for a true crime story like this one, the big reveal of what actually happened comes at the end. Likewise, there is a part somewhere around the middle where the story is the most juiciest, creating the peak of engagement. The rest of this book in particular, although interesting, probably doesn't warrant a 10 out of 10. So my rating clearly suffered from assessing the book at the end, where it was the most interesting, and mostly remembering the peak of the story when thinking back about what rating I should give it.
+- Maybe for the future I should start rating books at several points in time and average the ratings out at the end. I could give a rating at every reading instance, which is usually once a day. Will try it, I think it will create its own problems but might be a more reliable measurement for book comparison.

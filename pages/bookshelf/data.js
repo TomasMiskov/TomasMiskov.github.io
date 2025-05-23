@@ -430,6 +430,22 @@ let data = [
         "date": "11/04/25",
         "rating": "9",
         "review": "https://tomasmiskov.com/where-crawdads-sing.html",
+    },
+    {
+        "name" : "Midnight in Peking",
+        "author": "Paul French",
+        "url":  "./images/Midnight in Peking.png", 
+        "date": "02/05/25",
+        "rating": "10",
+        "review": "https://tomasmiskov.com/midnight-in-peking.html",
+    },
+    {
+        "name" : "How Minds Change",
+        "author": "David McRaney",
+        "url":  "./images/How Minds Change.png", 
+        "date": "18/05/25",
+        "rating": "8.5",
+        "review": "https://tomasmiskov.com/how-minds-change.html",
     }
 ]
 
