@@ -13,11 +13,13 @@ title: Bookshelf
   margin: 20px 0;
   gap: 15px;
   align-items: center;
+  padding-left: 0;
 }
 
 /* Consistent select styling across devices */
 .filter-select {
-  padding: 8px 12px;
+  height: 30px;
+  padding: 0 12px;
   border-radius: 4px;
   border: 1px solid #ccc;
   background-color: white;
@@ -31,6 +33,8 @@ title: Bookshelf
   background-position: right 8px center;
   background-size: 16px;
   padding-right: 32px;
+  display: flex;
+  align-items: center;
 }
 
 /* Remove default focus outline and add custom one */
@@ -42,13 +46,8 @@ title: Bookshelf
 
 /* Style for mobile devices */
 @media screen and (max-width: 768px) {
-  .filter-container {
-    padding: 0 10px;
-  }
-  
   .filter-select {
     font-size: 16px; /* Prevents zoom on iOS */
-    padding: 10px 12px;
   }
 }
 
