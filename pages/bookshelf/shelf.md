@@ -7,6 +7,74 @@ title: Bookshelf
 /*               Bookshelf                */
 /*----------------------------------------*/
 
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+/* Toggle Switch Container */
+.toggle-container {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Toggle Ball */
+.toggle-ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Toggle Ball when active (descending) */
+.toggle-container.active .toggle-ball {
+  transform: translateX(30px);
+}
+
+/* Arrow inside the ball */
+.toggle-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-container.active .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+/* Hover effects */
+.filter-select:hover {
+  border-color: #999;
+}
+
+.toggle-container:hover {
+  background-color: #d0d0d0;
+}
+
 .slider-wrap{
   position: relative;
   width: 100%;
@@ -58,6 +126,20 @@ title: Bookshelf
   flex-direction: column;
 }
 </style>
+
+<div class="filter-container">
+    <select id="filterField" class="filter-select">
+        <option value="author">Author</option>
+        <option value="name">Book Name</option>
+        <option value="date">Date</option>
+        <option value="rating">Rating</option>
+    </select>
+    <div id="directionToggle" class="toggle-container">
+        <div class="toggle-ball">
+            <span class="toggle-arrow">↑</span>
+        </div>
+    </div>
+</div>
 
 <div class="slider-wrap">
     <div class="slider">
