@@ -4,7 +4,14 @@ let filterField = document.querySelector('#filterField');
 let directionToggle = document.querySelector('#directionToggle');
 let toggleArrow = document.querySelector('.toggle-arrow');
 
-let isAscending = true;
+
+// Default to descending by date
+let isAscending = false;
+
+// Set filter field to 'date' by default if not already set
+if (filterField) {
+    filterField.value = 'date';
+}
 
 // Function to parse date string (DD/MM/YY) to Date object
 function parseDate(dateStr) {
