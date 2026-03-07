@@ -119,7 +119,7 @@ title: Bookshelf
   position: relative;
   margin: auto;
   height: 300px;
-  width: 1900px;
+  width: 2300px;
   padding-top: 20px;
   justify-content: start;
   display: flex;

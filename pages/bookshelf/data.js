@@ -446,6 +446,14 @@ let data = [
         "date": "18/05/25",
         "rating": "8.5",
         "review": "https://tomasmiskov.com/how-minds-change.html",
+    },
+    {
+        "name" : "Non Moriamur",
+        "author": "Kilian E. Leibundgut",
+        "url":  "./images/Non Moriamur.png", 
+        "date": "06/03/26",
+        "rating": "9",
+        "review": "/non-moriamur.html",
     }
 ]
 
