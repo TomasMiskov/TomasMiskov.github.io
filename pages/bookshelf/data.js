@@ -5,7 +5,7 @@ let data = [
         "url": "./images/Life of Pi.png",
         "date": "08/07/22",
         "rating": "8",
-        "review": "https://tomasmiskov.com/life-of-pi.html",
+        "review": "/life-of-pi.html",
     },
     {
         "name" : "A Man Called Ove",
@@ -13,7 +13,7 @@ let data = [
         "url": "./images/A Man Called Ove.png",
         "date": "27/12/21",
         "rating": "7",
-        "review": "https://tomasmiskov.com/a-man-called-ove.html",
+        "review": "/a-man-called-ove.html",
     },
     {
         "name" : "The Unlikely Pilgrimage of Harold Fry",
@@ -21,7 +21,7 @@ let data = [
         "url": "./images/The Unlikely Pilgrimage of Harold Fry.png", 
         "date": "21/07/22",
         "rating": "6",
-        "review": "https://tomasmiskov.com/the-unlikely-pilgrimage-of-harold-fry.html",
+        "review": "/the-unlikely-pilgrimage-of-harold-fry.html",
     },
     {
         "name" : "Neophilia",
@@ -29,7 +29,7 @@ let data = [
         "url": "./images/Neophilia.png", 
         "date": "20/08/22",
         "rating": "8",
-        "review": "https://tomasmiskov.com/neophilia.html",
+        "review": "/neophilia.html",
     },
     {
         "name" : "A Thousand Splendid Suns",
@@ -37,7 +37,7 @@ let data = [
         "url": "./images/A Thousand Splendid Suns.png", 
         "date": "30/07/22",
         "rating": "10",
-        "review": "https://tomasmiskov.com/a-thousand-splendid-suns.html",
+        "review": "/a-thousand-splendid-suns.html",
     },
     {
         "name" : "Animal Farm",
@@ -45,7 +45,7 @@ let data = [
         "url": "./images/Animal Farm.png", 
         "date": "15/08/21",
         "rating": "8",
-        "review": "https://tomasmiskov.com/animal-farm.html",
+        "review": "/animal-farm.html",
     },
     {
         "name" : "The Da Vinci Code",
@@ -53,7 +53,7 @@ let data = [
         "url": "./images/The Da Vinci Code.png", 
         "date": "13/08/22",
         "rating": "9",
-        "review": "https://tomasmiskov.com/the-da-vinci-code.html",
+        "review": "/the-da-vinci-code.html",
     },
     {
         "name" : "The Pleasure of Finding Things Out",
@@ -61,7 +61,7 @@ let data = [
         "url": "./images/The Pleasure of Finding Things Out.png", 
         "date": "25/05/22",
         "rating": "9",
-        "review": "https://tomasmiskov.com/the-pleasure-of-finding-things-out.html",
+        "review": "/the-pleasure-of-finding-things-out.html",
     },
     {
         "name" : "Oscar and the Lady in Pink",
@@ -69,7 +69,7 @@ let data = [
         "url": "./images/Oscar and the Lady in Pink.png", 
         "date": "24/08/21",
         "rating": "8",
-        "review": "https://tomasmiskov.com/oscar-and-the-lady-in-pink.html",
+        "review": "/oscar-and-the-lady-in-pink.html",
     },
     {
         "name" : "Skin in the Game",
@@ -77,7 +77,7 @@ let data = [
         "url": "./images/Skin in the Game.png", 
         "date": "12/06/20",
         "rating": "6",
-        "review": "https://tomasmiskov.com/skin-in-the-game.html",
+        "review": "/skin-in-the-game.html",
     },
     // {
     //     "name" : "Siddhartha",
@@ -85,7 +85,7 @@ let data = [
     //     "url": "./images/E-reader.png", 
     //     "date": "12/07/21",
     //     "rating": "6",
-    //     "review": "https://tomasmiskov.com/siddhartha.html",
+    //     "review": "/siddhartha.html",
     // },
     {
         "name" : "Flowers for Algernon",
@@ -93,7 +93,7 @@ let data = [
         "url": "./images/Flowers for Algernon.png",  
         "date": "28/07/21",
         "rating": "10",
-        "review": "https://tomasmiskov.com/flowers-for-algernon.html",
+        "review": "/flowers-for-algernon.html",
     },
     // {
     //     "name" : "Ten Little Soldiers",
@@ -101,7 +101,7 @@ let data = [
     //     "url": "./images/E-reader.png",  
     //     "date": "31/07/21",
     //     "rating": "9",
-    //     "review": "https://tomasmiskov.com/ten-little-soldiers.html",
+    //     "review": "/ten-little-soldiers.html",
     // },
     {
         "name" : "The Schopenhauer Cure",
@@ -109,7 +109,7 @@ let data = [
         "url":  "./images/The Schopenhauer Cure.png",  
         "date": "10/01/22",
         "rating": "7",
-        "review": "https://tomasmiskov.com/the-schopenhauer-cure.html",
+        "review": "/the-schopenhauer-cure.html",
     },
     {
         "name" : "The Minds of Billy Milligan",
@@ -117,7 +117,7 @@ let data = [
         "url":  "./images/The Minds of Billy Milligan.png",  
         "date": "11/09/22",
         "rating": "7",
-        "review": "https://tomasmiskov.com/the-minds-of-billy-milligan.html",
+        "review": "/the-minds-of-billy-milligan.html",
     },
     {
         "name" : "The End of Everything",
@@ -125,7 +125,7 @@ let data = [
         "url":  "./images/The End of Everything.png",  
         "date": "28/09/22",
         "rating": "8.5",
-        "review": "https://tomasmiskov.com/the-end-of-everything.html",
+        "review": "/the-end-of-everything.html",
     },
     {
         "name" : "Perfectly Reasonable Deviations from the Beaten Track",
@@ -133,7 +133,7 @@ let data = [
         "url":  "./images/Perfectly Reasonable Deviations.png",  
         "date": "13/11/22",
         "rating": "8.5",
-        "review": "https://tomasmiskov.com/perfectly-reasonable-deviations.html",
+        "review": "/perfectly-reasonable-deviations.html",
     },
     {
         "name" : "The Amazing Story of the Man Who Cycled from India to Europe for Love",
@@ -141,7 +141,7 @@ let data = [
         "url":  "./images/The Amazing Story.png",  
         "date": "28/02/23",
         "rating": "7",
-        "review": "https://tomasmiskov.com/the-amazing-story.html",
+        "review": "/the-amazing-story.html",
     },
     {
         "name" : "The Stranger",
@@ -149,7 +149,7 @@ let data = [
         "url":  "./images/The Stranger.png",  
         "date": "08/03/23",
         "rating": "6",
-        "review": "https://tomasmiskov.com/the-stranger.html",
+        "review": "/the-stranger.html",
     },
     {
         "name" : "Anxious People",
@@ -157,7 +157,7 @@ let data = [
         "url":  "./images/Anxious People.png",  
         "date": "21/04/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/anxious-people.html",
+        "review": "/anxious-people.html",
     },
     {
         "name" : "Helgoland",
@@ -165,7 +165,7 @@ let data = [
         "url":  "./images/Helgoland.png",  
         "date": "29/05/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/helgoland.html",
+        "review": "/helgoland.html",
     },
     {
         "name" : "Zero - The Biography of a Dangerous Idea",
@@ -173,7 +173,7 @@ let data = [
         "url":  "./images/Zero.png",  
         "date": "10/06/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/zero.html",
+        "review": "/zero.html",
     },
     {
         "name" : "Papillon",
@@ -181,7 +181,7 @@ let data = [
         "url":  "./images/Papillon.png",  
         "date": "05/07/23",
         "rating": "10",
-        "review": "https://tomasmiskov.com/papillon.html",
+        "review": "/papillon.html",
     },
     {
         "name" : "Dying To Be Me",
@@ -189,7 +189,7 @@ let data = [
         "url":  "./images/Dying To Be Me.png",  
         "date": "31/07/23",
         "rating": "4",
-        "review": "https://tomasmiskov.com/dying-to-be-me.html",
+        "review": "/dying-to-be-me.html",
     },
     {
         "name" : "Anaximander",
@@ -197,7 +197,7 @@ let data = [
         "url":  "./images/Anaximander.png",  
         "date": "19/08/23",
         "rating": "8.5",
-        "review": "https://tomasmiskov.com/anaximander.html",
+        "review": "/anaximander.html",
     },
     {
         "name" : "The Myth of Normal",
@@ -205,7 +205,7 @@ let data = [
         "url":  "./images/The Myth of Normal.png",  
         "date": "15/09/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/the-myth-of-normal.html",
+        "review": "/the-myth-of-normal.html",
     },
     {
         "name" : "Banco",
@@ -213,7 +213,7 @@ let data = [
         "url":  "./images/Banco.png",  
         "date": "22/09/23",
         "rating": "9",
-        "review": "https://tomasmiskov.com/banco.html",
+        "review": "/banco.html",
     },
     {
         "name" : "The Shell Collector",
@@ -221,7 +221,7 @@ let data = [
         "url":  "./images/The Shell Collector.png",  
         "date": "05/10/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/the-shell-collector.html",
+        "review": "/the-shell-collector.html",
     },
     {
         "name" : "A Mathematician's Apology",
@@ -229,7 +229,7 @@ let data = [
         "url":  "./images/A Mathematician's Apology.png",  
         "date": "08/10/23",
         "rating": "8",
-        "review": "https://tomasmiskov.com/mathematicians-apology.html",
+        "review": "/mathematicians-apology.html",
     },
     {
         "name" : "Tribes",
@@ -237,7 +237,7 @@ let data = [
         "url":  "./images/Tribes.png",  
         "date": "25/10/23",
         "rating": "6.5",
-        "review": "https://tomasmiskov.com/tribes.html",
+        "review": "/tribes.html",
     },
     {
         "name" : "This Perfect Day",
@@ -245,7 +245,7 @@ let data = [
         "url":  "./images/This Perfect Day.png",  
         "date": "23/11/23",
         "rating": "8.5",
-        "review": "https://tomasmiskov.com/this-perfect-day.html",
+        "review": "/this-perfect-day.html",
     },
     {
         "name" : "Endurance",
@@ -253,7 +253,7 @@ let data = [
         "url":  "./images/Endurance.png",  
         "date": "02/01/24",
         "rating": "9",
-        "review": "https://tomasmiskov.com/endurance.html",
+        "review": "/endurance.html",
     },
     {
         "name" : "The Web of Life",
@@ -261,7 +261,7 @@ let data = [
         "url":  "./images/The Web of Life.png",  
         "date": "21/01/24",
         "rating": "9",
-        "review": "https://tomasmiskov.com/the-web-of-life.html",
+        "review": "/the-web-of-life.html",
     },
     {
         "name" : "OPEN",
@@ -269,7 +269,7 @@ let data = [
         "url":  "./images/OPEN.png",  
         "date": "10/02/24",
         "rating": "9",
-        "review": "https://tomasmiskov.com/open.html",
+        "review": "/open.html",
     },
     {
         "name" : "The Solutions Are Already Here",
@@ -277,7 +277,7 @@ let data = [
         "url":  "./images/Solutions Are Already Here.png",  
         "date": "04/04/24",
         "rating": "6.5",
-        "review": "https://tomasmiskov.com/solutions-are-here.html",
+        "review": "/solutions-are-here.html",
     },
     {
         "name" : "Brave New World",
@@ -285,7 +285,7 @@ let data = [
         "url":  "./images/Brave New World.png",  
         "date": "14/04/24",
         "rating": "7",
-        "review": "https://tomasmiskov.com/brave-new-world.html",
+        "review": "/brave-new-world.html",
     },
     {
         "name" : "Brave New World Revisited",
@@ -293,7 +293,7 @@ let data = [
         "url":  "./images/Brave New World Revisited.png",  
         "date": "27/04/24",
         "rating": "9",
-        "review": "https://tomasmiskov.com/brave-new-world-revisited.html",
+        "review": "/brave-new-world-revisited.html",
     },
     {
         "name" : "To Kill a Mockingbird",
@@ -301,7 +301,7 @@ let data = [
         "url":  "./images/To Kill a Mockingbird.png",  
         "date": "13/05/24",
         "rating": "7",
-        "review": "https://tomasmiskov.com/to-kill-a-mockingbird.html",
+        "review": "/to-kill-a-mockingbird.html",
     },
     {
         "name" : "Thinking, Fast and Slow",
@@ -309,7 +309,7 @@ let data = [
         "url":  "./images/Thinking Fast and Slow.png",  
         "date": "12/06/24",
         "rating": "10",
-        "review": "https://tomasmiskov.com/thinking-fast-and-slow.html",
+        "review": "/thinking-fast-and-slow.html",
     },
     {
         "name" : "Exploration Fawcett: Journey to the Lost City of Z",
@@ -317,7 +317,7 @@ let data = [
         "url":  "./images/Exploration Fawcett.png",  
         "date": "08/07/24",
         "rating": "7.5",
-        "review": "https://tomasmiskov.com/exploration-fawcett.html",
+        "review": "/exploration-fawcett.html",
     },
     {
         "name" : "The Cell",
@@ -325,7 +325,7 @@ let data = [
         "url":  "./images/The Cell.png",  
         "date": "26/07/24",
         "rating": "7",
-        "review": "https://tomasmiskov.com/the-cell.html",
+        "review": "/the-cell.html",
     },
     {
         "name" : "Lord of the Flies",
@@ -333,7 +333,7 @@ let data = [
         "url":  "./images/Lord of the Flies.png",  
         "date": "05/08/24",
         "rating": "5",
-        "review": "https://tomasmiskov.com/lord-of-flies.html",
+        "review": "/lord-of-flies.html",
     },
     {
         "name" : "The Book of Laughter and Forgetting",
@@ -341,7 +341,7 @@ let data = [
         "url":  "./images/The Book of Laughter and Forgetting.png",  
         "date": "25/08/24",
         "rating": "7.5",
-        "review": "https://tomasmiskov.com/book-of-laughter-and-forgetting.html",
+        "review": "/book-of-laughter-and-forgetting.html",
     },
     {
         "name" : "The Blind Watchmaker",
@@ -349,7 +349,7 @@ let data = [
         "url":  "./images/The Blind Watchmaker.png",  
         "date": "27/09/24",
         "rating": "8",
-        "review": "https://tomasmiskov.com/the-blind-watchmaker.html",
+        "review": "/the-blind-watchmaker.html",
     },
     {
         "name" : "The Creative Act",
@@ -357,7 +357,7 @@ let data = [
         "url":  "./images/The Creative Act.png",  
         "date": "13/10/24",
         "rating": "5",
-        "review": "https://tomasmiskov.com/the-creative-act.html",
+        "review": "/the-creative-act.html",
     },
     {
         "name" : "Man's Search for Meaning",
@@ -365,7 +365,7 @@ let data = [
         "url":  "./images/Man's Search for Meaning.png",  
         "date": "25/10/24",
         "rating": "8",
-        "review": "https://tomasmiskov.com/mans-search-for-meaning.html",
+        "review": "/mans-search-for-meaning.html",
     },
     {
         "name" : "Educated",
@@ -373,7 +373,7 @@ let data = [
         "url":  "./images/Educated.png",  
         "date": "13/11/24",
         "rating": "8",
-        "review": "https://tomasmiskov.com/educated.html",
+        "review": "/educated.html",
     },
     {
         "name" : "Entangled Life",
@@ -381,7 +381,7 @@ let data = [
         "url":  "./images/Entangled Life.png",  
         "date": "02/12/24",
         "rating": "8",
-        "review": "https://tomasmiskov.com/entangled-life.html",
+        "review": "/entangled-life.html",
     },
     {
         "name" : "An Evil Cradling",
@@ -389,7 +389,7 @@ let data = [
         "url":  "./images/An Evil Cradling.png",  
         "date": "20/12/24",
         "rating": "7.5",
-        "review": "https://tomasmiskov.com/evil-cradling.html",
+        "review": "/evil-cradling.html",
     },
     {
         "name" : "The Nature of Nature",
@@ -397,7 +397,7 @@ let data = [
         "url":  "./images/The Nature of Nature.png",  
         "date": "31/12/24",
         "rating": "10",
-        "review": "https://tomasmiskov.com/nature-of-nature.html",
+        "review": "/nature-of-nature.html",
     },
     {
         "name" : "Love Triangle",
@@ -405,7 +405,7 @@ let data = [
         "url":  "./images/Love Triangle.png",  
         "date": "22/01/25",
         "rating": "8",
-        "review": "https://tomasmiskov.com/love-triangle.html",
+        "review": "/love-triangle.html",
     },
     {
         "name" : "The Man Who Mistook His Wife for a Hat",
@@ -413,7 +413,7 @@ let data = [
         "url":  "./images/The Man Who Mistook His Wife for a Hat.png",  
         "date": "05/02/25",
         "rating": "5",
-        "review": "https://tomasmiskov.com/man-who-mistook-his-wife-for-hat.html",
+        "review": "/man-who-mistook-his-wife-for-hat.html",
     },
     {
         "name" : "A Buzz in the Meadow",
@@ -421,7 +421,7 @@ let data = [
         "url":  "./images/A Buzz in the Meadow.png", 
         "date": "28/02/25",
         "rating": "9",
-        "review": "https://tomasmiskov.com/buzz-in-the-meadow.html",
+        "review": "/buzz-in-the-meadow.html",
     },
     {
         "name" : "Where Crawdads Sing",
@@ -429,7 +429,7 @@ let data = [
         "url":  "./images/Where Crawdads Sing.png", 
         "date": "11/04/25",
         "rating": "9",
-        "review": "https://tomasmiskov.com/where-crawdads-sing.html",
+        "review": "/where-crawdads-sing.html",
     },
     {
         "name" : "Midnight in Peking",
@@ -437,7 +437,7 @@ let data = [
         "url":  "./images/Midnight in Peking.png", 
         "date": "02/05/25",
         "rating": "10",
-        "review": "https://tomasmiskov.com/midnight-in-peking.html",
+        "review": "/midnight-in-peking.html",
     },
     {
         "name" : "How Minds Change",
@@ -445,7 +445,7 @@ let data = [
         "url":  "./images/How Minds Change.png", 
         "date": "18/05/25",
         "rating": "8.5",
-        "review": "https://tomasmiskov.com/how-minds-change.html",
+        "review": "/how-minds-change.html",
     },
     {
         "name" : "Non Moriamur",
@@ -454,6 +454,38 @@ let data = [
         "date": "06/03/26",
         "rating": "9",
         "review": "/non-moriamur.html",
+    },
+    {
+        "name" : "Project Hail Mary",
+        "author": "Andy Weir",
+        "url":  "./images/Project Hail Mary.png", 
+        "date": "29/01/26",
+        "rating": "8",
+        "review": "/project-hail-mary.html",
+    },
+    {
+        "name" : "Everything I Want To Do Is Illegal",
+        "author": "Joel Salatin",
+        "url":  "./images/Everything I Want To Do Is Illegal.png", 
+        "date": "13/11/25",
+        "rating": "6",
+        "review": "/everything-i-want-to-do-is-illegal.html",
+    },
+    {
+        "name" : "Adventures of a Young Naturalist",
+        "author": "David Attenborough",
+        "url":  "./images/Adventures Of A Young Naturalist.png", 
+        "date": "03/08/25",
+        "rating": "7.5",
+        "review": "/adventures-of-a-young-naturalist.html",
+    },
+    {
+        "name" : "a universe from nothing",
+        "author": "Lawrence M. Krauss",
+        "url":  "./images/A Universe From Nothing.png", 
+        "date": "06/09/25",
+        "rating": "7",
+        "review": "/a-universe-from-nothing.html",
     }
 ]
 

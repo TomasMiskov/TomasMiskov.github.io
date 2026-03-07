@@ -1,0 +1,27 @@
+---
+layout: post
+title: Project Hail Mary
+category: book-reflection
+---
+
+### Rating
+**8/10** It's a total page turner, no doubt about that, but I am subtracting 2 points for some parts I wasn't the biggest fan of. Let's start with the *total page turner* parts. The story just flows, you simply want to read more and preferably also faster. For a nerd like me the parts where the main character takes you through his mental processes for figuring out scientific experiments and coming up with theories is just top-notch brain candy. Likewise, the musings about parallels between us and another intelligent alien civilization are enjoyable to ponder and spun even further beyond what the book provides. The science is just overall interesting, and as far as I could tell, made as factual as possible. The descriptive parts provide just enough for you to get a good mental picture of the scenes without boring you to death with details. The pace at which the story develops is also well controlled, keeping you on the edge of your seat for most of the book. For these reasons, it was a solid 10/10 for maybe the first half of the book, but then came a few questionable choices by the author.
+
+First, why is the Russian character a heavy drinker, the Chinese character meh with English and the scientist character a nerd with inappropriate sexual humor? It felt like a beginning of a bad joke when these characters were introduced. Second, every bad accident, mishap or failure is promptly resolved and figured out - either with luck, science or their combination. I mean, it's a story, I get it, it ends well, that's what the majority of readers want. But it gets a bit boring when you start expecting a random accident to soon appear because it's been too calm for a while and once it does you already know it will soon be over. Sure, you don't know how exactly, but the pace at which these ups and downs start occurring in the second half of the book is a just a tad bit too fast and predictable.
+
+Then there is the sheer intellectual capacity of the main character. Again, I know, it's a sci-fi story, it's not real life. But got dammit, the guy learned to understand an alien that speaks in whale language within like a week or two. He became fluent in *whale*... in 2 weeks, while also being the most brilliant experimental biologist in the world, and 6th grade science teacher who from his head knows random facts like atomic number of random elements and distance from Earth to a bunch of stars and planets. If he failed or didn't know something, it was always at something unimportant, despite the apparent attempts at making him a bit more relatable through this. And of course, he himself keeps saying how dumb and unqualified he is. Yeah dude, yeah... 
+
+Maybe if the main character wasn't as capable, the story wouldn't be as enjoyable. Maybe we want stories with superheroes, but at times I simply felt that it could have been a bit more realistic if he wasn't both smarter than Einstein and Marie-Curie at the same time. Finally, the sentence structure; simple, dumbed down, short sentences, short dialogues, repetitive patterns. Probably aiming to be as accessible as possible. As easy to read as possible. Again, probably a conscious choice with the aim of becoming another bestseller after the author's first massive success with The Martian. I can understand that, I just wished for a bit more nuance in language from time to time.
+
+### Synopsis
+Sun is infected with a microbe that's stealing its energy. Our species will die soon unless we somehow stop the microbe. We figure out the microbe is also affecting other stars, except for one. So we build a ship to go check that star and figure out how come it's immune. That ship is powered by the same microbe because it turns out that it's the perfect fuel ever invented (or rather that has ever evolved). Once we arrive to the star only one of the scientists survives. But to his surprise, there's another ship already! Aliens? Yes! They make contact, they become friends, they figure out how come this star is immune to the microbe. Then they save both of their respective civilizations. Happy ending, but of course, there's lot more drama in between all of this; both intra- and inter-species drama.
+
+
+### Notes
+- engaging book, read through it super fast, but had some second thoughts on parts of the plot
+- it's science fiction, it's not supposed to be realistic but it would maybe be a bit nicer if it was, or maybe not, maybe we want books to be extra and have characters with crazy capabilities, that's why we like books
+- what bothered me was the speed and ability with which the mai character would solve any scientific problem
+	- dude literally met an alien that speaks like a whale and basically learned to understand him without any aid in a week
+		- yet chinese is just scribbles for him - wow, okay...
+- I especially enjoyed the parts where he was going through his mental steps of solving science problems
+- also the parts where he was pondering the parallels and differences between us and aliens, I found it super interesting thinking further through the problems that would arise if we would actually meet aliens and we would try to communicate
