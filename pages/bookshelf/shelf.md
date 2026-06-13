@@ -155,11 +155,69 @@ title: Bookshelf
 .rating-wrap{
   position: relative;
   display: flex;
-  height: 50px;
+  min-height: 50px;
   margin-top: 50px;
   text-align: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 8px;
+}
+
+/* When showing a hovered book's info, render it as plain text, not a link */
+#review-link.book-info{
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+  pointer-events: none;
+}
+
+.book-author{
+  display: block;
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* Numeric rating, shown above the squares on hover */
+.rating-number{
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+  color: #555;
+  line-height: 1;
+  min-height: 0.8em;
+}
+
+/* Rating shown as 10 squares; filled = black, empty = outline only */
+.rating-squares{
+  display: grid;
+  grid-template-columns: repeat(10, 16px);
+  gap: 4px;
+  justify-content: center;
+}
+
+.rating-box{
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 3px; /* slight soft edge */
+  background: transparent;
+}
+
+.rating-box.filled{
+  background: #000;
+}
+
+.rating-box.half{
+  background: linear-gradient(to right, #000 50%, transparent 50%);
+}
+
+/* On mobile stack into two rows of five */
+@media screen and (max-width: 768px){
+  .rating-squares{
+    grid-template-columns: repeat(5, 16px);
+  }
 }
 
 /* Shelf row: arrows flank the scrollable shelf */
@@ -202,10 +260,16 @@ title: Bookshelf
   cursor: default;
 }
 
-/* Hide arrows on touch / small screens — wheel & swipe handle those */
+/* Hide arrows on touch / small screens — wheel & swipe handle those.
+   Also drop the negative margins (used to reclaim arrow width) so the
+   shelf doesn't overflow the viewport edges. */
 @media (hover: none), (max-width: 768px){
   .shelf-arrow{
     display: none;
+  }
+  .shelf-row{
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>
@@ -236,7 +300,8 @@ title: Bookshelf
 
 <div class="rating-wrap">
     <a href="{{ '/book-reflection-archive' | relative_url }}" id="review-link">Review Archive</a>
-    <p style="margin-top:10px" id="rating">Rating: <b>?/10</b></p>
+    <div id="rating-number" class="rating-number"></div>
+    <div id="rating" class="rating-squares" aria-label="Rating"></div>
 </div>
 
 <div>

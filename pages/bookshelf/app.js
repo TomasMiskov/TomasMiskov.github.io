@@ -5,6 +5,21 @@ let directionToggle = document.querySelector('#directionToggle');
 let toggleArrow = document.querySelector('.toggle-arrow');
 let shelfPrev = document.querySelector('#shelfPrev');
 let shelfNext = document.querySelector('#shelfNext');
+let ratingEl = document.querySelector('#rating');
+let ratingNumberEl = document.querySelector('#rating-number');
+
+// Render the rating as 10 squares, filling the first n (supports halves, e.g. 6.5)
+function renderRating(n) {
+    let html = '';
+    for (let i = 1; i <= 10; i++) {
+        let cls = 'rating-box';
+        if (i <= n) cls += ' filled';
+        else if (i - n === 0.5) cls += ' half';
+        html += `<span class="${cls}"></span>`;
+    }
+    ratingEl.innerHTML = html;
+}
+renderRating(0); // default: all empty
 
 
 // Default to descending by date
@@ -124,7 +139,6 @@ sliderWrap.addEventListener('wheel', (e) => {
 function attachEventListeners() {
     let items = [...document.querySelectorAll('.slider-item')];
     let reviewLink = document.querySelector('#review-link');
-    let rating = document.querySelector('#rating');
 
     items.forEach(item => {
         item.addEventListener("mouseenter", () => {
@@ -135,16 +149,22 @@ function attachEventListeners() {
     items.forEach((item, idx) => {
         item.addEventListener("mousemove", () => {
             item.style.bottom = "20px";
-            rating.innerHTML = `Rating: <b>${data[idx].rating}/10</b>`;
-            reviewLink.textContent = `${data[idx].name}`;
-            reviewLink.href = `${data[idx].review}`;
+            renderRating(parseFloat(data[idx].rating));
+            ratingNumberEl.textContent = `${data[idx].rating}/10`;
+            // Show book info as plain text — the spine itself is the link
+            reviewLink.classList.add('book-info');
+            reviewLink.removeAttribute('href');
+            reviewLink.innerHTML = `${data[idx].name}<span class="book-author">${data[idx].author}</span>`;
         });
     });
 
     items.forEach(item => {
         item.addEventListener("mouseleave", () => {
             item.style.bottom = "0";
-            rating.innerHTML = "Rating: <b>?/10</b>";
+            renderRating(0);
+            ratingNumberEl.textContent = "";
+            // Restore the archive link
+            reviewLink.classList.remove('book-info');
             reviewLink.textContent = "Review Archive";
             reviewLink.href = "https://tomasmiskov.com/book-reflection-archive";
         });
@@ -179,46 +199,5 @@ aTags.forEach((atag, idx) => {
     atag.href = `${data[idx].review}`;
 })
 
-// CLICKING ON BOOKS FUNCTIONALITY //
-let reviewLink = document.querySelector('#review-link');
-let rating = document.querySelector('#rating')
-
-items.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-        item.style.cursor = "grab";
-    });
-})
-
- items.forEach((item, idx) => {
-    item.addEventListener("mousemove", () => {
-        item.style.bottom = "20px";
-        rating.innerHTML = `Rating: <b>${data[idx].rating}/10</b>`;
-        reviewLink.textContent = `${data[idx].name}`;
-        reviewLink.href = `${data[idx].review}`;
-    });
- })
-
- items.forEach(item => {
-    item.addEventListener("mouseleave", () => {
-        item.style.bottom = "0";
-        // rating.innerHTML = "Rating: <b>?/10</b>";
-        // reviewLink.textContent = `Review Archive`;
-        // reviewLink.href = "https://tomasmiskov.com/book-reflection-archive";
-    });
- })
-
-//  let clicked = false;
-//  items.forEach((item, idx) => {
-//     item.addEventListener("click", () => {
-//         if(clicked){
-//             clicked = false;
-//             item.style.bottom = "0px";
-//         }
-//         clicked = true;
-//         item.style.bottom = "20px";
-//         rating.innerHTML = `, Rating: <b>${data[idx].rating}/10</b>`;
-//         reviewLink.href = `${data[idx].review}`;
-//     });
-//  })
-
-    
+// Hover interaction is wired in attachEventListeners(), which runs on initial
+// load and after every re-sort.
