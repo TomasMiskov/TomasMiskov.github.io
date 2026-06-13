@@ -109,6 +109,14 @@ title: Bookshelf
   margin: auto;
   margin-top: 20px;
   overflow: auto;
+  --fade-left: 0px;
+  --fade-right: 48px;
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0, #000 var(--fade-left),
+    #000 calc(100% - var(--fade-right)), transparent 100%);
+  mask-image: linear-gradient(to right,
+    transparent 0, #000 var(--fade-left),
+    #000 calc(100% - var(--fade-right)), transparent 100%);
 }
 
 .slider-wrap::-webkit-scrollbar{

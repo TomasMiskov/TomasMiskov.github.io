@@ -54,7 +54,33 @@ function updateBookshelf() {
     
     // Reattach event listeners
     attachEventListeners();
+
+    // Re-sorting resets scrollLeft to 0, so recompute the edge fades
+    updateFades();
 }
+
+// Fade the shelf edges only on the side that has more to scroll
+function updateFades() {
+    const max = sliderWrap.scrollWidth - sliderWrap.clientWidth;
+    const x = sliderWrap.scrollLeft;
+    sliderWrap.style.setProperty('--fade-left',  x > 2       ? '48px' : '0px');
+    sliderWrap.style.setProperty('--fade-right', x < max - 2 ? '48px' : '0px');
+}
+sliderWrap.addEventListener('scroll', updateFades);
+window.addEventListener('resize', updateFades);
+// Spine widths aren't known until the images load, so recompute then
+window.addEventListener('load', updateFades);
+
+// Turn vertical wheel into horizontal scroll while hovering the shelf.
+// Only fires when the pointer is over sliderWrap. We always consume a
+// vertical-dominant wheel so reaching the shelf's end never spills over
+// into a sudden page jump — move the pointer off the shelf to scroll the page.
+sliderWrap.addEventListener('wheel', (e) => {
+    // Let native horizontal swipes (trackpads) pass through untouched
+    if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+    e.preventDefault();
+    sliderWrap.scrollLeft += e.deltaY;
+}, { passive: false });
 
 // Function to attach event listeners to book items
 function attachEventListeners() {
