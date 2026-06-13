@@ -119,7 +119,7 @@ title: Bookshelf
   position: relative;
   margin: auto;
   height: 300px;
-  width: 2700px;
+  width: max-content;
   padding-top: 20px;
   justify-content: start;
   display: flex;
@@ -129,6 +129,7 @@ title: Bookshelf
 .slider-item{
   position: relative;
   display: inline;
+  flex-shrink: 0;
 }
 
 .slide:hover{
@@ -138,7 +139,7 @@ title: Bookshelf
 .book-spine{
   position: relative;
   height: 300px;
-  padding-right: 20px;
+  padding-right: 5px;
   // -webkit-filter: drop-shadow(5px 5px 5px #222222);
   // filter: drop-shadow(5px 5px 5px #222222);
 }
