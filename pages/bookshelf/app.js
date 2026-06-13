@@ -3,6 +3,8 @@ let slider = document.querySelector('.slider');
 let filterField = document.querySelector('#filterField');
 let directionToggle = document.querySelector('#directionToggle');
 let toggleArrow = document.querySelector('.toggle-arrow');
+let shelfPrev = document.querySelector('#shelfPrev');
+let shelfNext = document.querySelector('#shelfNext');
 
 
 // Default to descending by date
@@ -59,17 +61,45 @@ function updateBookshelf() {
     updateFades();
 }
 
-// Fade the shelf edges only on the side that has more to scroll
+// Fade the shelf edges (and disable arrows) only on a side with more to scroll
 function updateFades() {
     const max = sliderWrap.scrollWidth - sliderWrap.clientWidth;
     const x = sliderWrap.scrollLeft;
-    sliderWrap.style.setProperty('--fade-left',  x > 2       ? '48px' : '0px');
-    sliderWrap.style.setProperty('--fade-right', x < max - 2 ? '48px' : '0px');
+    const canPrev = x > 2;
+    const canNext = x < max - 2;
+    sliderWrap.style.setProperty('--fade-left',  canPrev ? '48px' : '0px');
+    sliderWrap.style.setProperty('--fade-right', canNext ? '48px' : '0px');
+    if (shelfPrev) shelfPrev.disabled = !canPrev;
+    if (shelfNext) shelfNext.disabled = !canNext;
 }
 sliderWrap.addEventListener('scroll', updateFades);
 window.addEventListener('resize', updateFades);
 // Spine widths aren't known until the images load, so recompute then
 window.addEventListener('load', updateFades);
+
+// Arrow buttons: ease toward a running target so rapid clicks flow smoothly
+let scrollTarget = null;
+let scrollRAF = null;
+
+function animateScroll() {
+    const diff = scrollTarget - sliderWrap.scrollLeft;
+    if (Math.abs(diff) < 0.5) {
+        sliderWrap.scrollLeft = scrollTarget;
+        scrollRAF = null;
+        return;
+    }
+    sliderWrap.scrollLeft += diff * 0.18; // ease-out toward target
+    scrollRAF = requestAnimationFrame(animateScroll);
+}
+
+function scrollShelf(direction) {
+    const max = sliderWrap.scrollWidth - sliderWrap.clientWidth;
+    const base = scrollTarget === null ? sliderWrap.scrollLeft : scrollTarget;
+    scrollTarget = Math.max(0, Math.min(max, base + direction * sliderWrap.clientWidth * 0.2));
+    if (!scrollRAF) scrollRAF = requestAnimationFrame(animateScroll);
+}
+if (shelfPrev) shelfPrev.addEventListener('click', () => scrollShelf(-1));
+if (shelfNext) shelfNext.addEventListener('click', () => scrollShelf(1));
 
 // Turn vertical wheel into horizontal scroll while hovering the shelf.
 // Only fires when the pointer is over sliderWrap. We always consume a
@@ -79,7 +109,15 @@ sliderWrap.addEventListener('wheel', (e) => {
     // Let native horizontal swipes (trackpads) pass through untouched
     if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
     e.preventDefault();
-    sliderWrap.scrollLeft += e.deltaY;
+    // Normalize chunky line/page-based wheels to pixels
+    let delta = e.deltaY;
+    if (e.deltaMode === 1) delta *= 16;                       // lines -> px
+    else if (e.deltaMode === 2) delta *= sliderWrap.clientWidth; // pages -> px
+    // Feed the same eased target the arrows use, so the motion is smooth
+    const max = sliderWrap.scrollWidth - sliderWrap.clientWidth;
+    const base = scrollTarget === null ? sliderWrap.scrollLeft : scrollTarget;
+    scrollTarget = Math.max(0, Math.min(max, base + delta));
+    if (!scrollRAF) scrollRAF = requestAnimationFrame(animateScroll);
 }, { passive: false });
 
 // Function to attach event listeners to book items

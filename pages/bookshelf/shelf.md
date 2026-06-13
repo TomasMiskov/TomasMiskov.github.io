@@ -161,6 +161,53 @@ title: Bookshelf
   justify-content: center;
   flex-direction: column;
 }
+
+/* Shelf row: arrows flank the scrollable shelf */
+.shelf-row{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: -44px;   /* arrow width (36) + gap (8) */
+  margin-right: -44px;
+}
+
+.shelf-row .slider-wrap{
+  flex: 1;
+  min-width: 0;
+}
+
+.shelf-arrow{
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.shelf-arrow:hover{
+  border-color: #999;
+}
+
+.shelf-arrow:disabled{
+  opacity: 0.2;
+  cursor: default;
+}
+
+/* Hide arrows on touch / small screens — wheel & swipe handle those */
+@media (hover: none), (max-width: 768px){
+  .shelf-arrow{
+    display: none;
+  }
+}
 </style>
 
 <div class="filter-container">
@@ -177,10 +224,14 @@ title: Bookshelf
     </div>
 </div>
 
-<div class="slider-wrap">
-    <div class="slider">
-    <!-- Insert Books Here Using JS -->
+<div class="shelf-row">
+    <button class="shelf-arrow" id="shelfPrev" aria-label="Scroll shelf left">‹</button>
+    <div class="slider-wrap">
+        <div class="slider">
+        <!-- Insert Books Here Using JS -->
+        </div>
     </div>
+    <button class="shelf-arrow" id="shelfNext" aria-label="Scroll shelf right">›</button>
 </div>
 
 <div class="rating-wrap">
@@ -192,5 +243,3 @@ title: Bookshelf
     <script src="data.js"></script>
     <script src="app.js"></script>
 </div>
-
-*to scroll the shelf using your mouse press SHIFT-key, then scroll
