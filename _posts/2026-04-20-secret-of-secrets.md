@@ -1,0 +1,20 @@
+---
+layout: post
+title: Secret of Secrets
+category: book-reflection
+---
+
+### Rating
+**9/10** This is a second book I have read from Dan Brown's Robert Langdon series. The first one was The Da Vinci Code and I gave it a straight 10 out of 10. This one was equally thrilling and unpredictable but I suppose I'm not giving it full marks simply because the novelty of Brown's writing wore off for me. Still though, the whole 650 pages keep you hooked until the end as Brown slowly feeds you with new information, unexpected turns, and new characters that slip in and out of the narrative. 
+
+Since I'm giving it 9 out of 10, I clearly liked it. I enjoyed the story and the mysticism of it. It was also unpredictable which obviously makes it a good detective story. What I din't enjoy quite as much was the constant jumping between concurrent storylines. Maybe I was just in the mood for a continuous narrative so the constant jumping between story lines made me feel like I am reading an ADHD TikTok optimized book to keep my dopamine levels high - fed by novelty of each chapter. Maybe I am over exaggerating a bit, but I feel it could have been equally enjoyable without as much narrative jumping. 
+
+Secondly, except for a few dead characters that were either villains or not so instrumental in the grand scheme of things, everything ended well, a little too well. That was bit of a bummer at the end. Even things that didn't needed to happen for it to be a good ending happened, making it tad bit too fabricated. I understand people generally crave good ends, but personally it felt a little too good to be true. But then again, the whole thrill of the novel seemed too good too be true to begin with. So probs I'm just being picky. 
+
+Which brings me to some of my thoughts on what constitutes a good story. Especially one that's set in e.g. contemporary Prague, with all characters plausibly being real people, doing real things. In such a setting, is a good story one that seems plausibly real, to a point where you are not sure if the narrative really happened? Or is a good story one that largely seems real but clearly parts of it are stretched to their extremes of plausibility making your imagination go wild between the confines of the real world? I think the answer largely boils down to personal preference, and if well written, both types of story can be very enjoyable to read. Personally however, I think I prefer the first type, which this book is not. When the story is so real that you question whether it really happened or not, you get into this weird mental space where at the same time you believe what you are reading, yet know it's just a story. I like that mental state, it's a weird state of cognitive dissonance that makes for an all encompassing reading experience. This book had a potential to be it, but from quite early on it became obvious that the narrative is slightly overstretched beyond what, at least my brain, considers plausible. Nonetheless, strong book, would read again.
+
+### Synopsis
+Professor Langdon is in Prague where his girlfriend, a noetic scientist, is presenting her latest research as a teaser for a new book about the nature of consciousness. They are both unaware that the invitation to Prague was a setup by the US government to stop her from publishing the book. The US government has vested interested in keeping her research secret in order to stay ahead in the latest arms race they are waging. To surprise of both Langdon and his girlfriend, they are about to become personally intertwined with this program, nearly causing its untimely demise. 
+
+### Notes
+- I like the depth of facts that this book offers - both scientific and historical. Of course I can't verify them all, and especially with the GABA levels it's a bit hard to know what's based on facts and what's part of the story narrative, but I generally enjoy books that are rooted in real history and science - it definitely increases the narrative plausibility 

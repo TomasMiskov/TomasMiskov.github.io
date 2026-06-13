@@ -486,6 +486,14 @@ let data = [
         "date": "06/09/25",
         "rating": "7",
         "review": "/a-universe-from-nothing.html",
+    },
+    {
+        "name" : "The Secret of Secrets",
+        "author": "Dan Brown",
+        "url":  "./images/The Secret of Secrets.png", 
+        "date": "20/04/26",
+        "rating": "9",
+        "review": "/secret-of-secrets.html",
     }
 ]
 
