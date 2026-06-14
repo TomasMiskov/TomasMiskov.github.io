@@ -1,5 +1,7 @@
 ---
 layout: default
+dependencies:
+    - p5
 ---
 
 <style type="text/css" media="screen">
@@ -14,11 +16,72 @@ layout: default
     line-height: 1;
     letter-spacing: -1px;
   }
+  .container .hint {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  #sketch-holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .noise-btn {
+    margin-top: 16px;
+    padding: 6px 16px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .noise-btn:hover {
+    background: #000;
+    color: #fff;
+  }
 </style>
 
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>This page wandered off :(</strong></p>
+  <p>The page you were after doesn't exist - but since you're here, have a play.</p>
+
+  <p class="hint">
+    Below is an interactive linear grid I coded for fun a while back.
+    Grab any dot and drag it to bend the lattice into your own weird spider
+    graph. Have fun :)
+  </p>
+
+  <div id="sketch-holder">
+    <div id="sketch">
+      <script type="text/javascript" src="{{ '/assets/js/draggable_grid.js' | relative_url }}"></script>
+    </div>
+  </div>
+
+  <button type="button" class="noise-btn" onclick="addNoise()">add noise</button>
 </div>
+
+<script type="text/javascript">
+// Nudge every interior dot a random amount in one of 4 directions.
+// Reads the global `grid` defined by draggable_grid.js — no change to that file.
+function addNoise() {
+  if (typeof grid === 'undefined' || !grid) return;
+  for (var x = 0; x < grid.cols; x++) {
+    for (var y = 0; y < grid.rows; y++) {
+      // leave the edges pinned
+      if (x === 0 || y === 0 || x === grid.cols - 1 || y === grid.rows - 1) continue;
+      var dot = grid.grid[x][y];
+      // random direction (any angle) and a random magnitude
+      var angle = Math.random() * Math.PI * 2;
+      var r = Math.min(grid.xstep, grid.ystep) * (0.2 + Math.random() * 0.3);
+      dot.x += Math.cos(angle) * r;
+      dot.y += Math.sin(angle) * r;
+    }
+  }
+}
+</script>
