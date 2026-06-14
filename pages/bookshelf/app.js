@@ -21,6 +21,35 @@ function renderRating(n) {
 }
 renderRating(0); // default: all empty
 
+let reviewLinkEl = document.querySelector('#review-link');
+let readReviewEl = document.querySelector('#read-review');
+let selectedItem = null;
+
+// Touch device? (no hover) — checked per-event so it adapts to device changes
+function isTouch() {
+    return window.matchMedia('(hover: none)').matches;
+}
+
+// Show a book's rating + name/author in the info area
+function showBookInfo(idx) {
+    renderRating(parseFloat(data[idx].rating));
+    ratingNumberEl.textContent = `${data[idx].rating}/10`;
+    reviewLinkEl.classList.add('book-info');
+    reviewLinkEl.removeAttribute('href');
+    reviewLinkEl.innerHTML = `${data[idx].name}<span class="book-author">${data[idx].author}</span>`;
+}
+
+// Reset the info area (and any touch selection) to the default empty state
+function resetBookInfo() {
+    renderRating(0);
+    ratingNumberEl.textContent = "";
+    reviewLinkEl.classList.remove('book-info');
+    reviewLinkEl.textContent = "Review Archive";
+    reviewLinkEl.href = "https://tomasmiskov.com/book-reflection-archive";
+    readReviewEl.style.display = "none";
+    if (selectedItem) { selectedItem.style.bottom = "0"; selectedItem = null; }
+}
+
 
 // Default to descending by date
 let isAscending = false;
@@ -71,6 +100,9 @@ function updateBookshelf() {
     
     // Reattach event listeners
     attachEventListeners();
+
+    // Re-sorting rebuilds the items, so clear any touch selection
+    resetBookInfo();
 
     // Re-sorting resets scrollLeft to 0, so recompute the edge fades
     updateFades();
@@ -138,7 +170,6 @@ sliderWrap.addEventListener('wheel', (e) => {
 // Function to attach event listeners to book items
 function attachEventListeners() {
     let items = [...document.querySelectorAll('.slider-item')];
-    let reviewLink = document.querySelector('#review-link');
 
     items.forEach(item => {
         item.addEventListener("mouseenter", () => {
@@ -146,27 +177,35 @@ function attachEventListeners() {
         });
     });
 
+    // Desktop: hover reveals the book info
     items.forEach((item, idx) => {
         item.addEventListener("mousemove", () => {
+            if (isTouch()) return;
             item.style.bottom = "20px";
-            renderRating(parseFloat(data[idx].rating));
-            ratingNumberEl.textContent = `${data[idx].rating}/10`;
-            // Show book info as plain text — the spine itself is the link
-            reviewLink.classList.add('book-info');
-            reviewLink.removeAttribute('href');
-            reviewLink.innerHTML = `${data[idx].name}<span class="book-author">${data[idx].author}</span>`;
+            showBookInfo(idx);
         });
     });
 
     items.forEach(item => {
         item.addEventListener("mouseleave", () => {
+            if (isTouch()) return;
             item.style.bottom = "0";
-            renderRating(0);
-            ratingNumberEl.textContent = "";
-            // Restore the archive link
-            reviewLink.classList.remove('book-info');
-            reviewLink.textContent = "Review Archive";
-            reviewLink.href = "https://tomasmiskov.com/book-reflection-archive";
+            resetBookInfo();
+        });
+    });
+
+    // Touch: first tap reveals the book info + a "Read review" link. The spine
+    // no longer navigates directly — the link does. Tapping elsewhere resets.
+    items.forEach((item, idx) => {
+        item.addEventListener("click", (e) => {
+            if (!isTouch()) return;
+            e.preventDefault();
+            if (selectedItem && selectedItem !== item) selectedItem.style.bottom = "0";
+            selectedItem = item;
+            item.style.bottom = "20px";
+            showBookInfo(idx);
+            readReviewEl.href = data[idx].review;
+            readReviewEl.style.display = "inline";
         });
     });
 }
@@ -185,8 +224,15 @@ updateBookshelf();
 filterField.addEventListener('change', updateBookshelf);
 directionToggle.addEventListener('click', toggleDirection);
 
+// Touch: tapping outside any book (and not the "Read review" link) resets
+document.addEventListener('click', (e) => {
+    if (!isTouch()) return;
+    if (e.target.closest('.slider-item')) return; // handled by the book's own tap
+    if (e.target.closest('#read-review')) return; // let the link navigate
+    if (selectedItem) resetBookInfo();
+});
+
 // Fill book divs with images
-let items = [...document.querySelectorAll('.slider-item')];
 let images = [...document.querySelectorAll('.book-spine')];
 let aTags = [...document.querySelectorAll('#review-post-link')];
 

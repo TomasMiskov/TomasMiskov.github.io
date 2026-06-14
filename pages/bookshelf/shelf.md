@@ -189,6 +189,13 @@ title: Bookshelf
   min-height: 0.8em;
 }
 
+/* "Read review" link — only revealed when a book is tapped on touch devices */
+.read-review{
+  display: none;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
 /* Rating shown as 10 squares; filled = black, empty = outline only */
 .rating-squares{
   display: grid;
@@ -302,6 +309,7 @@ title: Bookshelf
     <a href="{{ '/book-reflection-archive' | relative_url }}" id="review-link">Review Archive</a>
     <div id="rating-number" class="rating-number"></div>
     <div id="rating" class="rating-squares" aria-label="Rating"></div>
+    <a href="#" id="read-review" class="read-review">Read review →</a>
 </div>
 
 <div>
