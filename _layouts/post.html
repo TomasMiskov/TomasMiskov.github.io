@@ -4,6 +4,43 @@ layout: default
 
 {%-include back_link.html-%}
 
+<style>
+.post-title-row{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.back-to-shelf{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.back-to-shelf:hover{
+  background: #000;
+  color: #fff;
+}
+
+.back-to-shelf__arrow{
+  transition: transform 0.2s;
+}
+
+.back-to-shelf:hover .back-to-shelf__arrow{
+  transform: translateX(-3px);
+}
+</style>
+
 <article>
   <p class="post-meta">
     <time datetime="{{ page.date }}">Created on {{ page.date | date: site.theme_config.date_format }}</time>
@@ -15,7 +52,14 @@ layout: default
     </p>
   {%- endif -%}
   
-  <h1>{{ page.title }}</h1>
+  <div class="post-title-row">
+    <h1>{{ page.title }}</h1>
+    {%- if page.category == 'book-reflection' -%}
+    <a class="back-to-shelf" href="{{ '/pages/bookshelf/shelf.html' | relative_url }}">
+      <span class="back-to-shelf__arrow">←</span> Shelf
+    </a>
+    {%- endif -%}
+  </div>
 
   {{ content }}
 
