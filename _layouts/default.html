@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "en" }}">
+<html lang="{{ page.lang | default: "en" }}" data-theme="{{ site.theme_config.appearance | default: "auto" }}">
   {%- include head.html -%}
-  <body a="{{ site.theme_config.appearance | default: "auto" }}">
-    <main class="page-content" aria-label="Content">
-      <div class="w">
-        {{ content }}
-      </div>
-    </main>
+  <body>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="theme-root">
+      <main class="page-content" aria-label="Content">
+        <div class="w">
+          {{ content }}
+        </div>
+      </main>
+    </div>
 
     {%-if site.goat_counter and jekyll.environment == "production"-%}
       {%-include goat_counter.html-%}
@@ -17,5 +22,37 @@
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
       {% endfor %}
     {% endif %}
+
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        var icon = btn.querySelector('i');
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function effective() {
+          var t = document.documentElement.getAttribute('data-theme');
+          if (t === 'dark' || t === 'light') return t;
+          return mq.matches ? 'dark' : 'light';
+        }
+        function syncIcon() {
+          if (icon) icon.className = effective() === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+        syncIcon();
+
+        btn.addEventListener('click', function () {
+          var next = effective() === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          syncIcon();
+        });
+
+        // Follow OS changes only while no explicit choice is stored.
+        mq.addEventListener('change', function () {
+          var t = document.documentElement.getAttribute('data-theme');
+          if (t !== 'dark' && t !== 'light') syncIcon();
+        });
+      })();
+    </script>
   </body>
 </html>

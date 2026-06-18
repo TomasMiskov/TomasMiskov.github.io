@@ -33,3 +33,9 @@ linkedin:
   href: 'https://www.linkedin.com/in/tom%C3%A1%C5%A1-mi%C5%A1kov-82aa44135/'
   title: 'LinkedIn'
   fa-icon: 'fa-brands fa-linkedin-in'
+
+inaturalist:
+  id: 'imotvoksim'
+  href: 'https://www.inaturalist.org/people/imotvoksim'
+  title: 'iNaturalist'
+  fa-icon: 'fa-solid fa-leaf'

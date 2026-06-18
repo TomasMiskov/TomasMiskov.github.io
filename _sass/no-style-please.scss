@@ -1,18 +1,58 @@
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   filter: invert(1);
-  img {
+  // Double-invert media so it displays in its true colors (videos,
+  // YouTube/GeoGebra embeds, etc.) the same way images are handled.
+  img, video, iframe {
     filter: invert(1);
 
     &.ioda { filter: invert(0); }
   }
 }
 
-body[a="dark"] { @include dark-appearance; }
+@mixin dark-background { background: #171717; }
 
+// The invert filter is applied to a wrapper (.theme-root) rather than
+// <html>/<body> so that the fixed theme-toggle button, which lives
+// outside the wrapper, keeps real fixed positioning (a filter on an
+// ancestor turns position:fixed into position:absolute).
+html[data-theme="dark"] {
+  .theme-root { @include dark-appearance; }
+  &, body { @include dark-background; }
+}
 
 @media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
+  html[data-theme="auto"] {
+    .theme-root { @include dark-appearance; }
+    &, body { @include dark-background; }
+  }
+}
+
+// Toggle button: sits outside .theme-root, so style both themes explicitly.
+.theme-toggle {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.7rem;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35em;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: rgb(20, 20, 20);
+  opacity: 0.55;
+
+  &:hover { opacity: 1; }
+
+  // The button sits outside .theme-root so it is not inverted; let the
+  // icon follow the button's color (overrides Font Awesome's own color).
+  i { color: inherit; }
+}
+
+html[data-theme="dark"] .theme-toggle { color: #dcdcdc; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .theme-toggle { color: #dcdcdc; }
 }
 // -------------------------------------------- //
 
