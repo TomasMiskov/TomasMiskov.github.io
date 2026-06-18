@@ -39,6 +39,22 @@ layout: default
 .back-to-shelf:hover .back-to-shelf__arrow{
   transform: translateX(-3px);
 }
+
+/* Horizontal book spine shown between the title and the review body.
+   Sized by JS once the image loads (see script below). */
+.book-spine-holder{
+  display: none;            /* revealed once measured to avoid layout jump */
+  position: relative;
+  margin: 4px 0 12px;
+}
+.book-spine-holder.ready{ display: block; }
+.book-spine-holder img{
+  position: absolute;       /* taken out of flow so the rotation can't overlap text */
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
 </style>
 
 <article>
@@ -61,9 +77,45 @@ layout: default
     {%- endif -%}
   </div>
 
+  {%- if page.category == 'book-reflection' -%}
+    <div id="book-spine" class="book-spine-holder" aria-hidden="true"></div>
+  {%- endif -%}
+
   {{ content }}
 
 </article>
+
+{%- if page.category == 'book-reflection' -%}
+<script src="{{ '/pages/bookshelf/data.js' | relative_url }}"></script>
+<script>
+(function () {
+  if (typeof data === 'undefined') return;
+  var book = data.find(function (b) { return b.review === location.pathname; });
+  var holder = document.getElementById('book-spine');
+  if (!book || !holder) return;
+
+  var img = new Image();
+  img.alt = book.name;
+
+  function size() {
+    if (!img.naturalWidth) return;
+    var avail = (holder.parentElement || document.body).clientWidth;
+    var len = avail; // spine spans the full width of the text column
+    var thick = len * (img.naturalWidth / img.naturalHeight); // spine thickness
+    img.style.height = len + 'px';
+    img.style.width = 'auto';
+    holder.style.width = len + 'px';
+    holder.style.height = thick + 'px';
+    holder.classList.add('ready');
+  }
+
+  img.onload = size;
+  img.src = '{{ "/pages/bookshelf/" | relative_url }}' + book.url.replace(/^\.\//, '');
+  holder.appendChild(img);
+  window.addEventListener('resize', size);
+})();
+</script>
+{%- endif -%}
 
 <!-- Rendering Latex using Mathjax -->
 <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
